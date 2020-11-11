@@ -40,11 +40,6 @@ namespace DNP_Assignment.Authentication
 
         public void CheckUserName(User newUser)
         {
-            throw new NotImplementedException();
-        }
-
-        public void checkUsername(User newUser)
-        {
             IList<User> users = getUsers().Result;
             User first = users.FirstOrDefault(user => user.Username.Equals(newUser.Username));
             if (first != null)

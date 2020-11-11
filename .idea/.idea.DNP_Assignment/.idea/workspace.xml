@@ -9,23 +9,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="000c982a-6a45-4064-b6a6-df3dbe42418b" name="Default Changelist" comment="assignment 1">
-      <change afterPath="$PROJECT_DIR$/WebAPI/Controllers/AdultController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Controllers/UserController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Data/FileContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Data/IAdultService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Data/UserData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DNP_Assignment/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DNP_Assignment/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="000c982a-6a45-4064-b6a6-df3dbe42418b" name="Default Changelist" comment="Broken">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DNP_Assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DNP_Assignment/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DNP_Assignment.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Models/Child.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Models/ChildInterest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Models/Family.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Models/Interest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Models/Pet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Authentication/UserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Authentication/UserData.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +41,6 @@
         <option value="$PROJECT_DIR$/DNP_Assignment/Shared/MainLayout.razor" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Shared/NavMenu.razor" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Startup.cs" />
-        <option value="$PROJECT_DIR$/DNP_Assignment/Authentication/UserData.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Models/Adult.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Models/Person.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Models/User.cs" />
@@ -71,6 +56,7 @@
         <option value="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Program.cs" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Authentication/UserData.cs" />
       </list>
     </option>
   </component>
@@ -170,6 +156,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605086051053</updated>
       <workItem from="1605086054747" duration="13209000" />
+      <workItem from="1605123382907" duration="4253000" />
     </task>
     <task id="LOCAL-00001" summary="Innitial">
       <created>1605086270471</created>
@@ -199,13 +186,20 @@
       <option name="project" value="LOCAL" />
       <updated>1605109399871</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Broken">
+      <created>1605123437823</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605123437823</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -217,13 +211,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Innitial" />
     <MESSAGE value="Model" />
     <MESSAGE value="assignment 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="assignment 1" />
+    <MESSAGE value="Broken" />
+    <option name="LAST_COMMIT_MESSAGE" value="Broken" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="195" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605123186903">
@@ -254,10 +250,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1471" y="210" key="RiderGenerateDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605122014852" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1605109406472">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1605123447456">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1605109406472" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1605123447456" />
     <state x="1105" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1605088324236">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
