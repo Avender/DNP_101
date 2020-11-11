@@ -8,9 +8,12 @@ public class Person {
     
     public int Id { get; set; }
     [NotNull]
+    [Required(ErrorMessage = "First name is required!")]
     public string FirstName { get; set; }
     [NotNull]
+    [Required(ErrorMessage = "Last name is required!")]
     public string LastName { get; set; }
+    [NotNull]
     [ValidHairColor]
     public string HairColor { get; set; }
     [NotNull]
@@ -23,6 +26,7 @@ public class Person {
     [NotNull, Range(30, 250)]
     public int Height { get; set; }
     [NotNull]
+    [Required(ErrorMessage = "Gender is required!")]
     public string Sex { get; set; }
 
     public void Update(Person toUpdate) {
