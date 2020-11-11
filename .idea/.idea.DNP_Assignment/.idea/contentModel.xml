@@ -10,8 +10,15 @@
         <e p="App.razor" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
+        <e p="Authentication" t="Include">
+          <e p="UserData.cs" t="Include" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Data" t="Include" />
+        <e p="Data" t="Include">
+          <e p="AdultService.cs" t="Include" />
+          <e p="IAdultService.cs" t="Include" />
+          <e p="IUserData.cs" t="Include" />
+        </e>
         <e p="DNP_Assignment.csproj" t="IncludeRecursive" />
         <e p="families.json" t="Include" />
         <e p="Models" t="Include">

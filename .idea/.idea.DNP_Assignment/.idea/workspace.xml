@@ -8,9 +8,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="000c982a-6a45-4064-b6a6-df3dbe42418b" name="Default Changelist" comment="Innitial">
-      <change afterPath="$PROJECT_DIR$/DNP_Assignment/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Models/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Models/Person.cs" afterDir="false" />
+    <list default="true" id="000c982a-6a45-4064-b6a6-df3dbe42418b" name="Default Changelist" comment="Model">
+      <change afterPath="$PROJECT_DIR$/DNP_Assignment/Authentication/UserData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DNP_Assignment/Data/AdultService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DNP_Assignment/Data/IAdultService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DNP_Assignment/Data/IUserData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DNP_Assignment/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DNP_Assignment/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DNP_Assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DNP_Assignment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/DNP_Assignment.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/DNP_Assignment.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +33,10 @@
         <option value="$PROJECT_DIR$/DNP_Assignment/Persistence/FileContext.cs" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Models/Person.cs" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Models/User.cs" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Data/IUserData.cs" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Data/IAdultService.cs" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Data/AdultService.cs" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Authentication/UserData.cs" />
       </list>
     </option>
   </component>
@@ -42,6 +51,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.DNP_Assignment">
@@ -84,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605086051053</updated>
-      <workItem from="1605086054747" duration="671000" />
+      <workItem from="1605086054747" duration="2755000" />
     </task>
     <task id="LOCAL-00001" summary="Innitial">
       <created>1605086270471</created>
@@ -100,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605086281546</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Model">
+      <created>1605086748457</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605086748457</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,12 +144,21 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Innitial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Innitial" />
+    <MESSAGE value="Model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Model" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1605086300831">
+    <state x="1471" y="210" key="RiderGenerateDialog" timestamp="1605088161691">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1605086300831" />
+    <state x="1471" y="210" key="RiderGenerateDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605088161691" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1605086756928">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1605086756928" />
+    <state x="1105" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1605088324236">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1105" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1605088324236" />
   </component>
 </project>

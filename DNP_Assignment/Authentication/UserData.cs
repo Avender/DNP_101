@@ -1,0 +1,83 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+using DNP_Assignment.Data;
+using Models;
+using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
+
+
+namespace DNP_Assignment.Authentication
+{
+    public class UserData : IUserData
+    {
+
+        public async Task AddUser(User newUser)
+        {
+            IList<User> users = await getUsers();
+            User first = users.FirstOrDefault(user => user.Username.Equals(newUser.Username));
+            if (first != null)
+            {
+                await Task.Run (() => throw new Exception("Username is already taken!"));
+            }
+            else
+            {
+                Console.WriteLine("i got here");
+                HttpClient client = new HttpClient();
+                string userAsJson = JsonSerializer.Serialize(newUser);
+                HttpContent content = new StringContent(
+                    userAsJson,
+                    Encoding.UTF8,
+                    "application/json");
+                await client.PostAsync(uri + "/user", content);
+            }
+        }
+
+        public void CheckUserName(User newUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void checkUsername(User newUser)
+        {
+            IList<User> users = getUsers().Result;
+            User first = users.FirstOrDefault(user => user.Username.Equals(newUser.Username));
+            if (first != null)
+            {
+                throw new Exception("Username is already taken!");
+            }
+        }
+        
+        public async Task<User> CheckUser(string Username, string Password)
+        {
+            IList<User> users = await getUsers();
+            User first = users.FirstOrDefault(user => user.Username.Equals(Username));
+            if (first == null)
+                throw new Exception("User not found");
+            if (!Password.Equals(first.Password))
+                throw new Exception("Incorrect Password");
+            return first;
+        }
+
+        public async Task<IList<User>> getUsers()
+        {
+            IList<User> result;
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(uri + "/user");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add
+                    (new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync(uri + "/user").Result;
+                var data = response.Content.ReadAsStringAsync().Result;
+                result = JsonConvert.DeserializeObject<IList<User>>(data);
+            }
+
+            return result;
+        }
+    }
+}
