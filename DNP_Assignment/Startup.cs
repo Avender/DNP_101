@@ -2,8 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DNP_Assignment.Authentication;
+using DNP_Assignment.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
@@ -27,6 +30,13 @@ namespace DNP_Assignment
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddScoped<IUserData, UserData>();
+            services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
+            services.AddSingleton<IAdultService, AdultService>();
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("MustBeLoggedIn", a => a.RequireAuthenticatedUser());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

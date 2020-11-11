@@ -1,0 +1,260 @@
+﻿@page "/view"
+@using DNP_Assignment.Data
+
+@inject IAdultService AdultService
+@using Models
+
+<div>
+    <h1 style="font-size: 56px; font-weight: bold; color: #0B4E58">Table of adults</h1>
+    <h6>Here you can view a detailed table of all adults. You can click on any column in order to sort the table either ascending or descending. Typing in the searchbox will dinamically filter the table based on what search option is selected </h6>
+</div>
+
+@if (adults == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <div>
+        <input type="text" value="@searchFilter" @oninput="@FilterChangedAsync" placeholder="Search here..."/>
+        <div class="radio-buttons pt-2">
+            <b>Search by:</b>
+            <div class="couple">
+                <input type="radio" id="ID" name="search" value="Id" checked="checked" @onclick="(() => { RadioButtonClicked(1); })">
+                <label for="ID">ID</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="firstname" name="search" value="FirstName" @onclick="(() => { RadioButtonClicked(2); })">
+                <label for="firstname">First Name</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="lastname" name="search" value="LastName" @onclick="(() => { RadioButtonClicked(3); })">
+                <label for="lastname">Last Name</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="hair" name="search" value="HairColor" @onclick="(() => { RadioButtonClicked(4); })">
+                <label for="hair">Hair Color</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="eyes" name="search" value="EyeColor" @onclick="(() => { RadioButtonClicked(5); })">
+                <label for="eyes">Eye Color</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="age" name="search" value="Age" @onclick="(() => { RadioButtonClicked(6); })">
+                <label for="age">Age</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="height" name="search" value="Height" @onclick="(() => { RadioButtonClicked(7); })">
+                <label for="height">Height</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="weight" name="search" value="Weight" @onclick="(() => { RadioButtonClicked(8); })">
+                <label for="weigth">Weight</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="sex" name="search" value="Sex" @onclick="(() => { RadioButtonClicked(9); })">
+                <label for="sex">Gender</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="job" name="search" value="JobTitle" @onclick="(() => { RadioButtonClicked(10); })">
+                <label for="job">Job Title</label>
+            </div>
+        </div>
+
+    </div>
+    <div class="mt-4">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th class="sort-th" @onclick="@(() => SortTable("Id"))">
+                    ID
+                    <span class="oi @(SetSortIcon("Id"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("FirstName"))">
+                    First Name
+                    <span class="oi @(SetSortIcon("FirstName"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("LastName"))">
+                    Last Name
+                    <span class="oi @(SetSortIcon("LastName"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("HairColor"))">
+                    Hair Color
+                    <span class="oi @(SetSortIcon("HairColor"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("EyeColor"))">
+                    Eye Color
+                    <span class="oi @(SetSortIcon("EyeColor"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("Age"))">
+                    Age
+                    <span class="oi @(SetSortIcon("Age"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("Height"))">
+                    Height
+                    <span class="oi @(SetSortIcon("Height"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("Weight"))">
+                    Weight
+                    <span class="oi @(SetSortIcon("Weight"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("Sex"))">
+                    Gender
+                    <span class="oi @(SetSortIcon("Sex"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("JobTitle"))">
+                    Job Title
+                    <span class="oi @(SetSortIcon("JobTitle"))"></span>
+                </th>
+                <AuthorizeView Policy="MustBeLoggedIn">
+                    <Authorized>
+                        <th>Action</th>
+                    </Authorized>
+                </AuthorizeView>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var adult in adults)
+            {
+                <tr>
+                    <td>@adult.Id</td>
+                    <td>@adult.FirstName</td>
+                    <td>@adult.LastName</td>
+                    <td>@adult.HairColor</td>
+                    <td>@adult.EyeColor</td>
+                    <td>@adult.Age</td>
+                    <td>@adult.Height</td>
+                    <td>@adult.Weight</td>
+                    <td>@adult.Sex</td>
+                    <td>@adult.JobTitle</td>
+                    <AuthorizeView Policy="MustBeLoggedIn">
+                        <Authorized>
+                            <td>
+                                <span class="btn btn-danger" @onclick="() => Remove(adult)">Delete</span>
+                            </td>
+                        </Authorized>
+                    </AuthorizeView>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    private IList<Adult> adults;
+    private string searchFilter = "";
+    private bool isSortedAscending = false;
+    private string activeSortColumn = "Id";
+    private int searchType = 1;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        adults = await AdultService.getAdult();
+        SortTable("Id");
+        StateHasChanged();
+    }
+
+    private async Task FilterChangedAsync(ChangeEventArgs args)
+    {
+        searchFilter = args.Value.ToString().Trim();
+        Search(searchFilter);
+    }
+
+    public async Task Search(string searchTerm)
+    {
+        adults = await AdultService.getAdult();
+        switch (searchType)
+        {
+            case 1:
+                adults = adults.Where(a => a.Id.ToString().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 2:
+                adults = adults.Where(a => a.FirstName.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 3:
+                adults = adults.Where(a => a.LastName.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 4:
+                adults = adults.Where(a => a.HairColor.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 5:
+                adults = adults.Where(a => a.EyeColor.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 6:
+                adults = adults.Where(a => a.Age.ToString().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 7:
+                adults = adults.Where(a => a.Height.ToString().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 8:
+                adults = adults.Where(a => a.Weight.ToString().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 9:
+                adults = adults.Where(a => a.Sex.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 10:
+                adults = adults.Where(a => a.JobTitle.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+        }
+    }
+
+    public async Task RadioButtonClicked(int num)
+    {
+        searchType = num;
+        searchFilter = "";
+        adults = await AdultService.getAdult();
+    }
+
+    private void Remove(Adult adultToRemove)
+    {
+        AdultService.Remove(adultToRemove);
+        adults.Remove(adultToRemove);
+        StateHasChanged();
+    }
+
+    private void SortTable(string columnName)
+    {
+        if (columnName != activeSortColumn)
+        {
+            adults = AdultService.getAdult().Result.OrderBy(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
+            isSortedAscending = true;
+            activeSortColumn = columnName;
+            StateHasChanged();
+        }
+        else
+        {
+            if (isSortedAscending)
+            {
+                adults = AdultService.getAdult().Result.OrderByDescending(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
+                StateHasChanged();
+            }
+            else
+            {
+                adults = AdultService.getAdult().Result.OrderBy(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
+                StateHasChanged();
+            }
+            isSortedAscending = !isSortedAscending;
+        }
+    }
+
+    private string SetSortIcon(string columnName)
+    {
+        if (activeSortColumn.Equals("") && columnName.Equals("Id"))
+            return "oi-arrow-bottom";
+        if (activeSortColumn != columnName)
+        {
+            return string.Empty;
+        }
+        if (isSortedAscending)
+        {
+            return "oi-arrow-bottom";
+        }
+        return "oi-arrow-top";
+    }
+
+    
+}

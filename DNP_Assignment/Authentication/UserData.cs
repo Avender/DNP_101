@@ -14,6 +14,8 @@ namespace DNP_Assignment.Authentication
 {
     public class UserData : IUserData
     {
+        
+        private const string uri = "http://localhost:57314";
 
         public async Task AddUser(User newUser)
         {

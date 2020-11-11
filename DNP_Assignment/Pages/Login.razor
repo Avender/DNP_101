@@ -1,0 +1,68 @@
+﻿@page "/login"
+@using DNP_Assignment.Authentication
+
+@inject AuthenticationStateProvider AuthenticationStateProvider;
+@inject NavigationManager NavigationManager;
+
+<AuthorizeView Policy="MustBeLoggedIn">
+    <NotAuthorized>
+        <h1 style="font-size: 56px; font-weight: bold; color: #0B4E58">Log in to your account</h1>
+        <div class="formBlock">
+            <form @onsubmit="@PerformLogIn">
+                <label>Username:<input type="text" @bind-value="Username"/></label>
+                <br/>
+                <label>Password:<input type="password" @bind-value="Password"/></label>
+                <br/>
+                <button type="submit" class="btn btn-primary">Log in</button>
+                <div class="alert alert-danger mt-2" style="@display">@ErrorMessage</div>
+            </form>
+        </div>
+    </NotAuthorized>
+    <Authorized>
+        <h1>Log out of your account</h1>
+        <button @onclick="PerformLogOut" class="btn btn-primary">Log out</button>
+    </Authorized>
+</AuthorizeView>
+
+
+@code {
+    private string Username;
+    private string Password;
+    private string ErrorMessage;
+    private string display = "display: none";
+
+    public async Task PerformLogIn()
+    {
+        ErrorMessage = "";
+        try
+        {
+            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(Username, Password);
+            NavigationManager.NavigateTo("/");
+            Username = "";
+            Password = "";
+            display = "display: none";
+        }
+        catch (Exception e)
+        {
+            display = "display: block";
+            ErrorMessage = e.Message;
+        }
+    }
+
+    public async Task PerformLogOut()
+    {
+        ErrorMessage = "";
+        Username = "";
+        Password = "";
+        try
+        {
+            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
+            NavigationManager.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+        }
+    }
+
+    
+}

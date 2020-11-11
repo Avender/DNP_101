@@ -11,6 +11,7 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="Authentication" t="Include">
+          <e p="CustomAuthenticationStateProvider.cs" t="Include" />
           <e p="UserData.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
@@ -41,13 +42,11 @@
         </e>
         <e p="Pages" t="Include">
           <e p="_Host.cshtml" t="Include" />
-          <e p="Counter.razor" t="Include" />
-          <e p="Error.cshtml" t="Include" />
-          <e p="FetchData.razor" t="Include" />
+          <e p="AddAdult.razor" t="Include" />
           <e p="Index.razor" t="Include" />
-        </e>
-        <e p="Persistence" t="Include">
-          <e p="FileContext.cs" t="Include" />
+          <e p="Login.razor" t="Include" />
+          <e p="Register.razor" t="Include" />
+          <e p="ViewAdults.razor" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">

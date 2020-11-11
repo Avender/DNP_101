@@ -1,0 +1,52 @@
+﻿@page "/Register"
+@using DNP_Assignment.Data
+@using Models
+
+@inject IUserData UserData;
+
+<h1>Register a new account</h1>
+
+<EditForm Model="@userToAdd" OnValidSubmit="Add">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="formBlock">
+        <label>First Name:<input type="text" @bind-value="userToAdd.FirstName" disabled="@isDisabled"/></label>
+        <br/>
+        <label>Last Name:<input type="text" @bind-value="userToAdd.LastName" disabled="@isDisabled"/></label>
+        <br/>
+        <label>Username:<input type="text" @bind-value="userToAdd.Username" disabled="@isDisabled"/></label>
+        <br/>
+        <label>Password:<input type="password" @bind-value="userToAdd.Password" disabled="@isDisabled"/></label>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit"/>
+    <div class="alert alert-success mt-2" style="@display">Registration was successful!</div>
+    <div class="alert alert-danger mt-2" style="@displayError">@ErrorMessage</div>
+</EditForm>
+
+
+@code {
+    User userToAdd { get; set; } = new User();
+    string display = "display: none";
+    string displayError = "display: none";
+    bool isDisabled = false;
+    string ErrorMessage;
+
+    private void Add()
+    {
+        try
+        {
+            UserData.AddUser(userToAdd);
+            UserData.CheckUserName(userToAdd);
+            displayError = "display: none";
+            display = "display: block";
+            isDisabled = true;
+        }
+        catch (Exception e)
+        {
+            ErrorMessage = e.Message;
+            displayError = "display: block";
+        }
+    }
+
+    
+}

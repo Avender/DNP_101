@@ -1,0 +1,89 @@
+﻿@page "/AddAdult"
+@using DNP_Assignment.Data
+@using Models
+
+@inject IAdultService AdultService
+
+<h1 style="font-size: 56px; font-weight: bold; color: #0B4E58">Add a new adult to the table</h1>
+
+<EditForm Model="@adultToAdd" OnValidSubmit="Add">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="formBlock">
+        <label>First Name:<input type="text" @bind-value="adultToAdd.FirstName" disabled="@isDisabled"/></label>
+        <br/>
+        <label>Last Name:<input type="text" @bind-value="adultToAdd.LastName" disabled="@isDisabled"/></label>
+        <br/>
+        <label>Hair Color:<input type="text" @bind-value="adultToAdd.HairColor" disabled="@isDisabled"/></label>
+        <br/>
+        <label>Eye Color:<input type="text" @bind-value="adultToAdd.EyeColor" disabled="@isDisabled"/></label>
+        <br/>
+        <label>Age:<input type="number" @bind-value="adultToAdd.Age" disabled="@isDisabled"/></label>
+        <br/>
+        <label>Height:<input type="number" @bind-value="adultToAdd.Height" disabled="@isDisabled"/></label>
+        <br/>
+        <label>Weight:<input type="number" @bind-value="adultToAdd.Weight" disabled="@isDisabled"/></label>
+        <br/>
+        <label>Gender:<select @bind="adultToAdd.Sex" disabled="@isDisabled">
+            <option value="">--Select an option--</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="Other">Other</option>
+        </select></label>
+        <br/>
+        <label>Job:<input type="text" @bind-value="adultToAdd.JobTitle" disabled="@isDisabled" list="jobs"/>
+            <datalist id="jobs">
+                <option>Database Manager</option>
+                <option>Captain</option>
+                <option>Veterenarian</option>
+                <option>Personal Trainer</option>
+                <option>Talent Acquisition Coordinator</option>
+                <option>Electrical Engineer</option>
+                <option>Front Desk Coordinator</option>
+                <option>Aquatic Ecologist</option>
+            </datalist></label>
+        <br/>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit" disabled="@isDisabled"/>
+    <input type="button" class="btn btn-success" value="Add another adult" @onclick="@GoAgain" disabled="@isBtnDisabled"/>
+    <div class="alert alert-success mt-2" style="@display">Adult added successfully!</div>
+</EditForm>
+
+
+@code {
+    Adult adultToAdd { get; set; } = new Adult();
+    public bool isDisabled = false;
+    public bool isBtnDisabled = true;
+    public string display = "display: none";
+
+    public async Task Add()
+    {
+        IList<Adult> adults = await AdultService.getAdult();
+        int count = 0;
+        while (true)
+        {
+            if (adults.Any(adult => adult.Id == count))
+            {
+                count++;
+            }
+            else
+            {
+                adultToAdd.Id = count;
+                break;
+            }
+        }
+        AdultService.Add(adultToAdd);
+        isDisabled = true;
+        isBtnDisabled = false;
+        display = "display: block";
+    }
+
+    public void GoAgain()
+    {
+        adultToAdd = new Adult();
+        isDisabled = false;
+        isBtnDisabled = true;
+        display = "display: none";
+    }
+
+}
