@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using WebAPI.Data;
+using Microsoft.AspNetCore.Mvc;
+using WebAPI.Models;
 using WebAPI.Models;
 
 namespace WebAPI.Controllers
@@ -17,7 +18,7 @@ namespace WebAPI.Controllers
         {
             this.userData = userData;
         }
-        
+
         [HttpGet]
         public async Task<ActionResult<User>> getUsers()
         {
@@ -44,6 +45,7 @@ namespace WebAPI.Controllers
 
             try
             {
+                Console.WriteLine(user.Username);
                 await userData.AddUser(user);
                 return Created($"/{user.Username}", user);
             }

@@ -94,10 +94,16 @@
         </e>
         <e p="Data" t="Include">
           <e p="AdultService.cs" t="Include" />
+          <e p="CustomDBContext.cs" t="Include" />
           <e p="FileContext.cs" t="Include" />
           <e p="IAdultService.cs" t="Include" />
           <e p="IUserData.cs" t="Include" />
           <e p="UserData.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="CustomDBContextModelSnapshot.cs" t="Include" />
+          <e p="InitialCreate.cs" t="Include" />
+          <e p="InitialCreate.Designer.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="Adult.cs" t="Include" />

@@ -7,6 +7,7 @@ namespace WebAPI.Models
     {
         [Required]
         [NotNull]
+        [Key]
         public string Username { get; set; }
         [Required]
         [NotNull]

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using WebAPI.Data;
+using Microsoft.AspNetCore.Mvc;
+using WebAPI.Models;
 using WebAPI.Models;
 
 namespace WebAPI.Controllers
@@ -33,7 +34,7 @@ namespace WebAPI.Controllers
                 return StatusCode(500, e.Message);
             }
         }
-
+        
         [HttpGet]
         [Route("{id:int}")]
         public async Task<ActionResult<Adult>> GetAdult([FromRoute] int id)
@@ -50,7 +51,7 @@ namespace WebAPI.Controllers
                 return StatusCode(404, "ERROR 404: Adult not found.");
             }
         }
-        
+
         [HttpPost]
         public async Task<ActionResult<Adult>> Add([FromBody] Adult adult)
         {
@@ -70,7 +71,7 @@ namespace WebAPI.Controllers
                 return StatusCode(500, e.Message);
             }
         }
-        
+
         [HttpDelete]
         [Route("{id:int}")]
         public async Task<ActionResult> Remove([FromRoute] int Id)

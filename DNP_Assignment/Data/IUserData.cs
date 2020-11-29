@@ -9,6 +9,6 @@ namespace DNP_Assignment.Data
 
         public Task AddUser(User user);
 
-        public void CheckUserName(User newUser);
+        public void checkUsername(User newUser);
     }
 }

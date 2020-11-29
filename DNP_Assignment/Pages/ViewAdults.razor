@@ -1,14 +1,12 @@
 ﻿@page "/view"
-@using DNP_Assignment.Data
 
+@using DNP_Assignment.Data
 @inject IAdultService AdultService
 @using Models
-
 <div>
     <h1 style="font-size: 56px; font-weight: bold; color: #0B4E58">Table of adults</h1>
     <h6>Here you can view a detailed table of all adults. You can click on any column in order to sort the table either ascending or descending. Typing in the searchbox will dinamically filter the table based on what search option is selected </h6>
 </div>
-
 @if (adults == null)
 {
     <p>
@@ -256,5 +254,4 @@ else
         return "oi-arrow-top";
     }
 
-    
 }

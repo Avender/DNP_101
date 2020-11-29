@@ -9,14 +9,12 @@ using Models;
 using Newtonsoft.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
-
-namespace DNP_Assignment.Authentication
+namespace DNP_Assignment.Auth
 {
     public class UserData : IUserData
     {
+        private const string uri = "http://localhost:5000";
         
-        private const string uri = "http://localhost:57314";
-
         public async Task AddUser(User newUser)
         {
             IList<User> users = await getUsers();
@@ -38,7 +36,7 @@ namespace DNP_Assignment.Authentication
             }
         }
 
-        public void CheckUserName(User newUser)
+        public void checkUsername(User newUser)
         {
             IList<User> users = getUsers().Result;
             User first = users.FirstOrDefault(user => user.Username.Equals(newUser.Username));
@@ -47,7 +45,7 @@ namespace DNP_Assignment.Authentication
                 throw new Exception("Username is already taken!");
             }
         }
-        
+
         public async Task<User> CheckUser(string Username, string Password)
         {
             IList<User> users = await getUsers();

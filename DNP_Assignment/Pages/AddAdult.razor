@@ -1,6 +1,7 @@
 ﻿@page "/AddAdult"
 @using DNP_Assignment.Data
 @using Models
+@attribute [Authorize(Policy = "MustBeLoggedIn")]
 
 @inject IAdultService AdultService
 

@@ -1,11 +1,10 @@
-﻿@page "/Register"
+﻿@page "/register"
 @using DNP_Assignment.Data
 @using Models
 
 @inject IUserData UserData;
 
-<h1>Register a new account</h1>
-
+<h1 style="font-size: 56px; font-weight: bold; color: #0B4E58">Register a new account</h1>
 <EditForm Model="@userToAdd" OnValidSubmit="Add">
     <DataAnnotationsValidator/>
     <ValidationSummary/>
@@ -23,7 +22,6 @@
     <div class="alert alert-danger mt-2" style="@displayError">@ErrorMessage</div>
 </EditForm>
 
-
 @code {
     User userToAdd { get; set; } = new User();
     string display = "display: none";
@@ -36,7 +34,7 @@
         try
         {
             UserData.AddUser(userToAdd);
-            UserData.CheckUserName(userToAdd);
+            UserData.checkUsername(userToAdd);
             displayError = "display: none";
             display = "display: block";
             isDisabled = true;
@@ -48,5 +46,4 @@
         }
     }
 
-    
 }

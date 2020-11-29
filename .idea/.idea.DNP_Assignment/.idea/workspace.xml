@@ -9,9 +9,38 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="000c982a-6a45-4064-b6a6-df3dbe42418b" name="Default Changelist" comment="Broken">
+    <list default="true" id="000c982a-6a45-4064-b6a6-df3dbe42418b" name="Default Changelist" comment="bagFix">
+      <change afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebAPI/Data/CustomDBContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebAPI/Migrations/CustomDBContextModelSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebAPI/Migrations/InitialCreate.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebAPI/Migrations/InitialCreate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DNP_Assignment/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DNP_Assignment/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DNP_Assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DNP_Assignment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/App.razor" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/App.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Authentication/CustomAuthenticationStateProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Authentication/CustomAuthenticationStateProvider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DNP_Assignment/Authentication/UserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Authentication/UserData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/DNP_Assignment.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/DNP_Assignment.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Data/AdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Data/AdultService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Data/IUserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Data/IUserData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Models/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Models/Person.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Pages/AddAdult.razor" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Pages/AddAdult.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Pages/Index.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Pages/Login.razor" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Pages/Login.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Pages/Register.razor" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Pages/Register.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Pages/ViewAdults.razor" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Pages/ViewAdults.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Pages/_Host.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Pages/_Host.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNP_Assignment/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/DNP_Assignment/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AdultController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AdultController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Data/FileContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Data/FileContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Models/Adult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Models/Adult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Models/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Models/Person.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,37 +55,44 @@
       <list>
         <option value="$PROJECT_DIR$/DNP_Assignment/Pages/FetchData.razor" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Persistence/FileContext.cs" />
-        <option value="$PROJECT_DIR$/DNP_Assignment/Models/Person.cs" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Models/User.cs" />
-        <option value="$PROJECT_DIR$/DNP_Assignment/Data/IUserData.cs" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Data/IAdultService.cs" />
-        <option value="$PROJECT_DIR$/DNP_Assignment/Data/AdultService.cs" />
-        <option value="$PROJECT_DIR$/DNP_Assignment/Authentication/CustomAuthenticationStateProvider.cs" />
-        <option value="$PROJECT_DIR$/DNP_Assignment/Pages/AddAdult.razor" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Pages/Charts.razor" />
-        <option value="$PROJECT_DIR$/DNP_Assignment/Pages/Index.razor" />
-        <option value="$PROJECT_DIR$/DNP_Assignment/Pages/Login.razor" />
-        <option value="$PROJECT_DIR$/DNP_Assignment/Pages/Register.razor" />
-        <option value="$PROJECT_DIR$/DNP_Assignment/Pages/ViewAdults.razor" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Shared/MainLayout.razor" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Shared/NavMenu.razor" />
-        <option value="$PROJECT_DIR$/DNP_Assignment/Startup.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Models/Adult.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Models/Person.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Models/User.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Data/IAdultService.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Data/IUserData.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Data/AdultService.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Data/FileContext.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Data/UserData.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Controllers/AdultController.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/WebAPI/users.json" />
-        <option value="$PROJECT_DIR$/WebAPI/Startup.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Properties/launchSettings.json" />
+        <option value="$PROJECT_DIR$/WebAPI/Data/FileContext.cs" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Data/IUserData.cs" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Data/AdultService.cs" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Models/Person.cs" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Pages/Index.razor" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Pages/Login.razor" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Startup.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Controllers/AdultController.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Controllers/UserController.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Data/CustomDBContext.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Migrations/InitialCreate.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Migrations/InitialCreate.Designer.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Migrations/CustomDBContextModelSnapshot.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Models/Person.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Models/Adult.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Models/User.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Startup.cs" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Program.cs" />
         <option value="$PROJECT_DIR$/DNP_Assignment/Authentication/UserData.cs" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Authentication/CustomAuthenticationStateProvider.cs" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Pages/ViewAdults.razor" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Pages/_Host.cshtml" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Pages/AddAdult.razor" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/Pages/Register.razor" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/wwwroot/css/site.css" />
+        <option value="$PROJECT_DIR$/DNP_Assignment/App.razor" />
       </list>
     </option>
   </component>
@@ -69,6 +105,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -77,9 +114,10 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="RiderIisExpressOptionsPageId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.DNP_Assignment">
+  <component name="RunManager" selected=".NET Launch Settings Profile.DNP_Assignment: IIS Express">
     <configuration name="DNP_Assignment" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DNP_Assignment/DNP_Assignment.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
@@ -156,7 +194,10 @@
       <option name="presentableId" value="Default" />
       <updated>1605086051053</updated>
       <workItem from="1605086054747" duration="13209000" />
-      <workItem from="1605123382907" duration="4253000" />
+      <workItem from="1605123382907" duration="7548000" />
+      <workItem from="1606660089777" duration="1280000" />
+      <workItem from="1606663283921" duration="68000" />
+      <workItem from="1606663539831" duration="5646000" />
     </task>
     <task id="LOCAL-00001" summary="Innitial">
       <created>1605086270471</created>
@@ -193,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605123437823</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="bagFix">
+      <created>1605130929734</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1605130929735</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,33 +262,39 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Innitial" />
     <MESSAGE value="Model" />
     <MESSAGE value="assignment 1" />
     <MESSAGE value="Broken" />
-    <option name="LAST_COMMIT_MESSAGE" value="Broken" />
+    <MESSAGE value="bagFix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bagFix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="195" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605123186903">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="195" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605123186903" />
-    <state width="1877" height="232" key="GridCell.Tab.0.bottom" timestamp="1605123283084">
+    <state width="914" height="232" key="GridCell.Tab.0.bottom" timestamp="1606677533166">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="914" height="232" key="GridCell.Tab.0.bottom/0.0.1920.1080/0.-1080.1920.1080@0.0.1920.1080" timestamp="1606677533166" />
     <state width="1877" height="232" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605123283084" />
-    <state width="1877" height="232" key="GridCell.Tab.0.center" timestamp="1605123283084">
+    <state width="914" height="232" key="GridCell.Tab.0.center" timestamp="1606677533165">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="914" height="232" key="GridCell.Tab.0.center/0.0.1920.1080/0.-1080.1920.1080@0.0.1920.1080" timestamp="1606677533165" />
     <state width="1877" height="232" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605123283084" />
-    <state width="1877" height="232" key="GridCell.Tab.0.left" timestamp="1605123283084">
+    <state width="914" height="232" key="GridCell.Tab.0.left" timestamp="1606677533165">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="914" height="232" key="GridCell.Tab.0.left/0.0.1920.1080/0.-1080.1920.1080@0.0.1920.1080" timestamp="1606677533165" />
     <state width="1877" height="232" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605123283084" />
-    <state width="1877" height="232" key="GridCell.Tab.0.right" timestamp="1605123283084">
+    <state width="914" height="232" key="GridCell.Tab.0.right" timestamp="1606677533166">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="914" height="232" key="GridCell.Tab.0.right/0.0.1920.1080/0.-1080.1920.1080@0.0.1920.1080" timestamp="1606677533166" />
     <state width="1877" height="232" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605123283084" />
     <state x="1032" y="275" key="Rider.ProjectTemplateDialog.Size" timestamp="1605116679322">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -250,10 +304,14 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1471" y="210" key="RiderGenerateDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605122014852" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1605123447456">
+    <state x="385" y="220" key="SettingsEditor" timestamp="1606676376780">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1605123447456" />
+    <state x="385" y="220" key="SettingsEditor/0.0.1920.1080/0.-1080.1920.1080@0.0.1920.1080" timestamp="1606676376780" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1605130935697">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1605130935697" />
     <state x="1105" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1605088324236">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

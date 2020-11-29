@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using DNP_Assignment.Data;
 using Models;
 using Newtonsoft.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
-
 
 namespace DNP_Assignment.Data
 {
     public class AdultService : IAdultService
     {
-        
         private const string uri = "http://localhost:5000";
 
         public async Task<IList<Adult>> getAdult()
@@ -49,5 +47,6 @@ namespace DNP_Assignment.Data
             HttpClient client = new HttpClient();
             await client.DeleteAsync(uri+"/adult/"+adultToRemove.Id);
         }
+        
     }
 }
